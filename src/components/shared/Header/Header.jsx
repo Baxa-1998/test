@@ -51,7 +51,7 @@ export default function Header({isBurger, setIsBurger}) {
   return (
     <header className={`header`}>
          <div className='header__left'>
-          <img  id='logo' src="/assets/logo.png" style={{width: "280px", height: '200px'}} alt="logo" />
+          <img  id='logo' src="/assets/logo.png" style={{width: "280px", height: 'auto'}} alt="logo" />
    
 
          </div>

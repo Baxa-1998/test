@@ -1,13 +1,15 @@
-'use client';
-import React from 'react';
+
+
 import './description.scss';
-import Image from 'next/image';
-import Title from '@/components/UI/title';
+
+
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 
 import { ScrollTrigger } from 'gsap/all';
-import { splitTextToSpans } from '@/utils/textSplit';
+
+import Title from '../../UI/Title';
+import { splitTextToSpans } from '../../../utils/textSplit';
 export default function Description() {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -91,7 +93,7 @@ export default function Description() {
   return (
     <section className="description">
       <div className="description__img">
-        <Image loading='lazy' width={412} height={412} src={'/assets/doctor.png'} alt="doctor" />
+        <img loading='lazy' style={{width:'412', height:'412'}} src={'/assets/doctor.png'} alt="doctor" />
         <h3>
         Мухитдинов Шерзод <br />
           <span>Шавкатович </span>

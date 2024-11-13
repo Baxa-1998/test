@@ -85,7 +85,7 @@
       left: 0; /* Положение слева */
       right: 0; /* Положение справа */
       bottom: 0; /* Положение снизу */
-      background: url('../../../public/assets/background.jpg') no-repeat center center; /* Фоновое изображение */
+      background: url('../../../../public/assets/background.jpg') no-repeat center center; /* Фоновое изображение */
       background-size: cover; /* Масштабирование фона */
       filter: brightness(80%); /* Применяем фильтр к фону */
       z-index: -1; 
