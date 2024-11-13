@@ -1,0 +1,106 @@
+.adress{
+  width: 90%;
+  height: 870px;
+  margin:  auto;
+  padding-top: 25px;
+  background: var(--background);
+  .adress__main_text{
+    display: flex;
+    gap: 15px;
+    align-items: self-end;
+    margin-left: 25px;
+    .adress__line{
+      width: 5px;
+      height: 56px;
+      background: var(--primary-color); 
+      
+    }
+    .adress__title{
+      font-size: 44px; 
+      font-weight: 600;
+      color: #1B315F;
+      font-weight: 700;
+      span{
+        font-weight: 400;
+      }
+
+    }
+
+  }
+  .adress__map{
+    position: relative;
+    display: flex; 
+    justify-content: end;
+    iframe{
+      margin-top: 50px;
+    }
+    .adress__item{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      // align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 120px;
+      top: 150px;
+      width: 500px;
+      height: fit-content;
+      background: #ffff;
+      padding-left: 25px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+      .adress__item_title{
+        color: #1B315F;
+        font-size: 32px;
+        font-weight: 600;
+      }
+
+    }
+  }
+  @media screen and (max-width: 900px){
+    height: fit-content;
+    .adress__main_text{
+      margin-left: 0px;
+      .adress__title{
+        font-size: 32px;
+      }
+    }
+
+    .adress__map{
+      flex-direction: column-reverse;
+      justify-content: center;
+      iframe{
+        width: 100%;
+      }
+      .adress__item{
+        width: 100%;
+        position: static;
+      }
+    }
+  }
+  @media screen and (max-width: 540px){
+    .adress__main_text{
+      align-items: center;
+      .adress__title{
+        font-size: 28px;
+        br{
+          display: none;
+        }
+      }
+    }
+    .adress__map{
+      flex-direction: column-reverse;
+      justify-content: center;
+      .adress__item{
+        .adress__item_title{
+          font-size: 26px;
+        }
+      }
+      iframe{
+        width: 100%;
+        height: 350px;
+      }
+    }
+  }
+}

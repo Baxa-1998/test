@@ -1,0 +1,60 @@
+.photos{
+  width: 90%;
+  height: fit-content; 
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  background: var(--background);
+  .photos__title{
+    font-size: 44px;
+    font-weight: 800;
+    color: #1B315F; 
+    margin-left: 80px;
+  }
+  .photo__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(371px, 1fr)); 
+    grid-template-rows: repeat(3, auto);   
+    gap: 25px; 
+    justify-content: center;
+    justify-items: center;
+    margin-top: 25px;
+ 
+    .photo__item {
+      width: 371px;
+      height: 277px;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; // Плавный переход для трансформации и прозрачности
+      img{
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+      }
+      // Уменьшаем непрозрачность остальных элементов при наведении на родительский элемент .photo__items
+      &:hover {
+        transform: scale(1.05); // Увеличение элемента при наведении
+        opacity: 1; // Убедитесь, что выбранный элемент полностью непрозрачный
+      }
+    }
+  
+    // Прозрачность для остальных элементов при наведении на родительский .photo__items
+    &:hover > .photo__item:not(:hover) {
+      opacity: 0.5; // Уменьшаем непрозрачность остальных элементов
+    }
+  
+    .card-background {
+      transition: filter 0.3s ease-in-out; // Плавный переход для фильтров
+  
+      // Фильтр при наведении на карточку
+      &:hover {
+       transform: scale(1.2);
+       cursor: pointer;
+      }
+    }
+  }
+  @media screen and (max-width: 540px) {
+    .photos__title{
+      font-size: 32px;
+      margin-left: 0px;
+    }
+  }
+}

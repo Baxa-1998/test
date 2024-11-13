@@ -1,0 +1,19 @@
+.btn{
+  position: relative;
+  display: block;
+  width: 191px;
+  height: 56px;
+  background: linear-gradient(232.73deg, #007B67 -20.12%, #005A4B 94.53%);
+  color: white;
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  transform: translateY(0%) !important;
+  top: 0;
+  
+  &:hover {
+    border-radius: 21px;
+    cursor: pointer;
+
+  }
+}

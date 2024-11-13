@@ -1,0 +1,118 @@
+.services{
+  width: 90%; 
+  height: 1200px; 
+  margin: auto ;
+  margin-top: 50px;
+  background: var(--background); 
+
+  .services__main_text{
+    display: flex;
+    gap: 15px;
+    align-items: self-end;
+    .services__line{
+      width: 5px;
+      height: 56px;
+      background: var(--primary-color); 
+
+    }
+    .services__title{
+      font-size: 44px; 
+      font-weight: 700;
+      color: #1B315F;
+      span{
+        font-weight: 400;
+      }
+
+    }
+  }
+  .services__items{
+    display: flex;
+    gap: 50px;
+    padding-top: 50px;
+   
+    .services__item_container{
+      width: 100%;
+      .services__item{
+        width: 100%;
+        .services__item_head{
+          display: flex;
+          justify-content: space-between;
+         
+          gap: 15px;
+          border-bottom: 1px solid #D7E2FF;
+          padding-bottom: 15px;
+         
+          .services__item_title{
+            color: #1B315F;
+            font-size: 32px;
+            font-weight: 800;
+            
+          }
+          .services__line{
+            width: 5px;
+            height: 56px;
+            background: var(--primary-color);
+            
+          }
+        }
+        .services__prices{
+          margin-top: 25px;
+          width: fit-content;
+          height: 266px;
+          width: 100%;
+       
+        
+    
+          h3{
+            font-size: 20px;
+            font-weight: 800;
+
+          }
+          .services__prices_item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        
+            // margin-top: 25px;
+            padding: 15px;
+            &:hover{
+              cursor: pointer;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+              transition: box-shadow 0.3s ease; /* Плавный переход тени */
+            }
+            .prices__item_line{
+              flex-grow: 1;
+              height: 1px; 
+              background: #D7E2FF;
+              margin-right:1rem ;
+              margin-left:1rem ;
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  @media screen and (max-width: 540px){
+    height: 1550px;
+    .services__items{
+      .services__item_container{
+        .services__item{
+          .services__prices{
+            .services__prices_item{
+              font-size: 12px;
+              flex-direction: column;
+              padding-bottom: 25px;
+              border-bottom: 1px solid var(--primary-color);
+            }
+            .prices__item_line{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

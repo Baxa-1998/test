@@ -1,0 +1,115 @@
+.main{
+  width: 100%;
+  height: 100vh;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  margin-top: -100px;
+  padding-top: 100px;
+ 
+
+ 
+
+//  img{
+//   position: fixed;
+//   // position: absolute;
+//   right: 50px;
+//   top: 750px;
+
+//  }
+  video{
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: brightness(80%);
+  
+  }
+  .main__content{
+    width: 90%;
+   
+    margin: 0 auto;
+    ul{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      color: white;
+      margin-top: 15px;
+      padding-bottom: 25px;
+      li{
+        position: relative;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 15px;
+
+        &::before{
+          content: '';
+          position: absolute;
+          left: -15px;
+          top: 11px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #1EBB92;
+        }
+
+      }
+    }
+  }
+  .main__title{
+    width: 500px;
+    color: white;
+    font-size: 52px;
+    // text-align: center;
+    // margin-top: 15%;
+   
+    font-family:"--font-cormorant" ;
+    line-height: 60px;
+    
+  }
+  @media screen and (max-width: 540px){
+    padding-top: 125px;
+    margin-top: -120px;
+    // background: url('../../../public//assets/background.jpg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    position: relative;
+    &::before{
+      content: ''; /* Создаем пустое содержимое */
+      position: absolute; /* Абсолютное позиционирование для псевдоэлемента */
+      top: 0; /* Положение сверху */
+      left: 0; /* Положение слева */
+      right: 0; /* Положение справа */
+      bottom: 0; /* Положение снизу */
+      background: url('../../../public/assets/background.jpg') no-repeat center center; /* Фоновое изображение */
+      background-size: cover; /* Масштабирование фона */
+      filter: brightness(80%); /* Применяем фильтр к фону */
+      z-index: -1; 
+    }
+    
+    video{
+      display: none;
+    }
+    .main__title{
+      font-size: 28px;
+      width: 350px;
+      line-height: 40px;
+    }
+    .main__content{
+      #text{
+        padding-top: 1rem;
+      }
+      ul{
+        li{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+
